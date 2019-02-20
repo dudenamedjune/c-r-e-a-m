@@ -30,11 +30,25 @@ const data = [
 export default class Example extends PureComponent {
   static jsfiddleUrl = 'https://jsfiddle.net/alidingling/xqjtetw0/';
 
+  static getDerivedStateFromProps() {
+    //this is not great standard wise just hacking the HACKATHON
+    const width = window.innerWidth;
+    const height = window.innerHeight;
+    return {
+      width,
+      height,
+    };
+  }
+
   render() {
+    const {
+      width,
+      height,
+    } = this.state;
     return (
       <LineChart
-        width={500}
-        height={300}
+        width={width}
+        height={height / 4}
         data={data}
         margin={{
           top: 5, right: 30, left: 20, bottom: 5,
