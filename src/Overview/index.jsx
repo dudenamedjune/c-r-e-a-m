@@ -2,6 +2,7 @@ import Grid from '@material-ui/core/Grid';
 import React from 'react';
 import { withStyles } from '@material-ui/core/styles';
 import LineChart from '../LineChart';
+import PieChart from '../PieChart';
 import Card from '../Card';
 
 const styles = theme => ({
@@ -27,6 +28,7 @@ function CenteredGrid() {
             titleText="Hari P"
             subTitleText="10M"
           >
+            <PieChart />
             <LineChart />
           </Card>
         </Grid>
