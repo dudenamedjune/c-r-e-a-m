@@ -76,14 +76,25 @@ import { withStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
+import LineChart from '../LineChart';
+import Grid from '@material-ui/core/Grid';
+import Overview from '../Overview/';
 
-const styles = {
+const styles = (theme) => ({
   root: {
     flexGrow: 1,
   },
-};
+  paper: {
+    padding: theme.spacing.unit * 2,
+    textAlign: 'center',
+    color: theme.palette.text.secondary,
+  },
+});
 
 class CenteredTabs extends React.Component {
+  constructor(props) {
+    super(props)
+  }
   state = {
     value: 0,
   };
@@ -91,12 +102,16 @@ class CenteredTabs extends React.Component {
   handleChange = (event, value) => {
     this.setState({ value });
   };
-
+  
   render() {
     const { classes } = this.props;
 
     return (
       <Router>
+     <div className={classes.root}>
+      <Grid container spacing={24}>
+        <Grid item xs={12}>
+        <div>
         <Paper className={classes.root}>
             <Tabs
               value={this.state.value}
@@ -105,18 +120,24 @@ class CenteredTabs extends React.Component {
               textColor="primary"
               centered
             >
-
-            <Tab label={<Link to='/overview'> Overview</Link>} />>
+            <Tab label={<Link to='/'> Overview</Link>} />>
             <Tab label={<Link to='/leaderboard'> Leaderboard</Link>} />
             <Tab label={<Link to='/badges'> Badges</Link>} />>
 
           </Tabs>
         </Paper>
+        <Route exact path="/" component={Overview} />
+        </div>
+          
+        </Grid>
+      </Grid>
+    </div>
+     
       </Router>
     
     );
   }
-}
+};
 
 CenteredTabs.propTypes = {
   classes: PropTypes.object.isRequired,
