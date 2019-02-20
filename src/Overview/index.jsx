@@ -22,7 +22,7 @@ function CenteredGrid() {
   return (
     <Grid item xs={12}>
       <Grid container>
-        <Grid item xs={6} sm={3}>
+        <Grid item xs={12}>
           <Card>
             <LineChart />
           </Card>
