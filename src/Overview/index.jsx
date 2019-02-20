@@ -1,16 +1,35 @@
-import React from 'react';
 import Grid from '@material-ui/core/Grid';
+import React from 'react';
+import { withStyles } from '@material-ui/core/styles';
 import LineChart from '../LineChart';
 import Card from '../Card';
+
+const styles = theme => ({
+  root: {
+    flexGrow: 1,
+  },
+  paper: {
+    padding: theme.spacing.unit * 6,
+    textAlign: 'center',
+    borderRadius: 12,
+    height: 140,
+    margin: 10,
+    color: theme.palette.text.secondary,
+  },
+});
 
 function CenteredGrid() {
   return (
     <Grid item xs={12}>
-      <Card>
-        <LineChart />
-      </Card>
+      <Grid container>
+        <Grid item xs={6} sm={3}>
+          <Card>
+            <LineChart />
+          </Card>
+        </Grid>
+      </Grid>
     </Grid>
   );
 }
 
-export default CenteredGrid;
+export default withStyles(styles)(CenteredGrid);
