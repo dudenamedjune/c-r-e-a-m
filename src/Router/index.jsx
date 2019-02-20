@@ -147,10 +147,9 @@ class CenteredTabs extends Component {
 
           </Tabs>
         </Paper>
-        <Route exact path="/" component={Overview} />
         </div>
-          
         </Grid>
+        <Route exact path="/" component={Overview} />
       </Grid>
     </div>
      

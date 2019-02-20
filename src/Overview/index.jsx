@@ -20,13 +20,9 @@ function CenteredGrid(props) {
   const { classes } = props;
 
   return (
-    <div className={classes.root}>
-      <Grid container spacing={24}>
         <Grid item xs={12}>
           <LineChart />
         </Grid>
-      </Grid>
-    </div>
   );
 }
 
