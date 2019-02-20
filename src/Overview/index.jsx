@@ -1,11 +1,11 @@
 import Grid from '@material-ui/core/Grid';
 import React from 'react';
 import { withStyles } from '@material-ui/core/styles';
+import Button from '@material-ui/core/Button';
+import { Link } from 'react-router-dom';
 import LineChart from '../LineChart';
 import PieChart from '../PieChart';
 import Card from '../Card';
-import Button from '@material-ui/core/Button';
-import { Link } from 'react-router-dom'
 
 const styles = theme => ({
   root: {
@@ -30,29 +30,29 @@ function CenteredGrid() {
             titleText="Hari P"
             subTitleText="10M"
           >
-            <PieChart />
+            {/* <PieChart /> */}
             <LineChart />
           </Card>
         </Grid>
         <Grid container>
           <Grid xs={6} sm={3}>
             <Card className="homeCard">
-              <Button component={Link} to="#"><img className="homeCardLinkImg" alt="Adjust Goals" src="/icons/ICON_AdjustGoals.svg"></img></Button>
+              <Button component={Link} to="#"><img className="homeCardLinkImg" alt="Adjust Goals" src="/icons/ICON_AdjustGoals.svg" /></Button>
             </Card>
           </Grid>
           <Grid xs={6} sm={3}>
             <Card className="homeCard">
-              <Button component={Link} to="#"><img className="homeCardLinkImg" alt="Link Account" src="/icons/ICON_LinkAccount.svg"></img></Button>
+              <Button component={Link} to="#"><img className="homeCardLinkImg" alt="Link Account" src="/icons/ICON_LinkAccount.svg" /></Button>
             </Card>
           </Grid>
           <Grid xs={6} sm={3}>
             <Card className="homeCard">
-              <Button component={Link} to="#"><img className="homeCardLinkImg" alt="Find Friends" src="/icons/ICON_FindFriends.svg"></img></Button>
+              <Button component={Link} to="#"><img className="homeCardLinkImg" alt="Find Friends" src="/icons/ICON_FindFriends.svg" /></Button>
             </Card>
           </Grid>
           <Grid xs={6} sm={3}>
             <Card className="homeCard">
-              <Button component={Link} to="#"><img className="homeCardLinkImg" alt="Savings Tips" src="/icons/ICON_SavingTips.svg"></img></Button>
+              <Button component={Link} to="#"><img className="homeCardLinkImg" alt="Savings Tips" src="/icons/ICON_SavingTips.svg" /></Button>
             </Card>
           </Grid>
         </Grid>

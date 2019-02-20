@@ -1,6 +1,7 @@
 import React, { PureComponent } from 'react';
+import Grid from '@material-ui/core/Grid';
 import {
-  PieChart, Pie,
+  PieChart, Pie, ResponsiveContainer,
 } from 'recharts';
 
 const data01 = [
@@ -16,10 +17,16 @@ export default class Example extends PureComponent {
 
   render() {
     return (
-      <PieChart width={800} height={400}>
-        <Pie data={data01} cx={200} cy={200} outerRadius={65} innerRadius={60} fill="#8884d8" />
-        <Pie data={data02} cx={200} cy={200} innerRadius={70} outerRadius={80} fill="#82ca9d" label endAngle={data02[0].value} />
-      </PieChart>
+      <div style={{ width: '50%', height: 120 }}>
+        <ResponsiveContainer>
+          <PieChart>
+            <Pie data={data01} cx={65} cy={70} outerRadius={25} innerRadius={15} fill="#8884d8" />
+            <Pie data={data02} cx={65} cy={70} innerRadius={30} outerRadius={35} fill="#82ca9d" label endAngle={360 * ((data01[0].value / data02[0].value) * 0.1)} />
+          </PieChart>
+        </ResponsiveContainer>
+
+      </div>
+
     );
   }
 }
