@@ -69,16 +69,20 @@
 
 // export default BasicExample;
 
-import React from 'react';
+import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
-import LineChart from '../LineChart';
 import Grid from '@material-ui/core/Grid';
 import Overview from '../Overview/';
+import AppBar from '@material-ui/core/AppBar';
+import Toolbar from '@material-ui/core/Toolbar';
+import Typography from '@material-ui/core/Typography';
+import IconButton from '@material-ui/core/IconButton';
+import AccountCircle from '@material-ui/icons/AccountCircle';
 
 const styles = (theme) => ({
   root: {
@@ -91,10 +95,7 @@ const styles = (theme) => ({
   },
 });
 
-class CenteredTabs extends React.Component {
-  constructor(props) {
-    super(props)
-  }
+class CenteredTabs extends Component {
   state = {
     value: 0,
   };
@@ -113,6 +114,26 @@ class CenteredTabs extends React.Component {
         <Grid item xs={12}>
         <div>
         <Paper className={classes.root}>
+        <AppBar position="static">
+          <Toolbar>            
+            <Typography variant="h6" color="inherit" className={classes.grow}>
+              CREAM
+            </Typography>
+            {(
+              <div>
+                <IconButton
+                  aria-owns={'menu-appbar'}
+                  aria-haspopup="true"
+                  onClick={this.handleMenu}
+                  color="inherit"
+                >
+                  <AccountCircle />
+                </IconButton>                
+              </div>
+            )}
+          </Toolbar>
+        </AppBar>
+            
             <Tabs
               value={this.state.value}
               onChange={this.handleChange}
