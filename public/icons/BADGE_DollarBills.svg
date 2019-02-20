@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="122px" height="123px" viewBox="0 0 122 123" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.2 (67145) - http://www.bohemiancoding.com/sketch -->
+    <title>Dollar bills badge</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Actual-Pages" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Badge-earned-1.0" transform="translate(-127.000000, -167.000000)">
+            <g id="Dollar-bills-badge" transform="translate(134.000000, 172.000000)">
+                <circle id="Oval" stroke="#FFD96C" stroke-width="7" fill="#002554" fill-rule="nonzero" cx="54" cy="56.2903679" r="57.5"></circle>
+                <g id="Group-Copy-2" transform="translate(64.500000, 64.790368) rotate(91.000000) translate(-64.500000, -64.790368) translate(30.000000, 30.290368)">
+                    <rect id="Rectangle-Copy" fill="#50D986" fill-rule="nonzero" transform="translate(34.888872, 34.260737) rotate(45.000000) translate(-34.888872, -34.260737) " x="3.3888717" y="17.7607367" width="63" height="33"></rect>
+                    <rect id="Rectangle-Copy-2" stroke="#13AA41" stroke-width="1.5" opacity="0.5" fill-rule="nonzero" transform="translate(34.344931, 34.433243) rotate(45.000000) translate(-34.344931, -34.433243) " x="6.59493142" y="21.1832432" width="55.5" height="26.5"></rect>
+                    <circle id="Oval" fill="#13AA41" fill-rule="nonzero" opacity="0.501232329" cx="34" cy="34" r="9"></circle>
+                    <circle id="Oval-Copy" fill="#13AA41" fill-rule="nonzero" opacity="0.5" cx="12" cy="24" r="2"></circle>
+                    <circle id="Oval-Copy-2" fill="#13AA41" fill-rule="nonzero" opacity="0.5" cx="56" cy="45" r="2"></circle>
+                    <text id="$" transform="translate(34.939340, 33.646447) rotate(45.000000) translate(-34.939340, -33.646447) " font-family="SourceSansPro-Bold, Source Sans Pro" font-size="12" font-weight="bold" fill="#50D986">
+                        <tspan x="31.7713398" y="38.1464466">$</tspan>
+                    </text>
+                </g>
+                <rect id="Rectangle-Copy-3" fill="#002554" fill-rule="nonzero" opacity="0.25" transform="translate(55.941125, 48.231493) rotate(90.000000) translate(-55.941125, -48.231493) " x="24.4411255" y="31.7314934" width="63" height="33"></rect>
+                <g id="Group-Copy" transform="translate(53.500000, 48.790368) rotate(45.000000) translate(-53.500000, -48.790368) translate(19.000000, 14.290368)">
+                    <rect id="Rectangle-Copy" fill="#50D986" fill-rule="nonzero" transform="translate(34.888872, 34.260737) rotate(45.000000) translate(-34.888872, -34.260737) " x="3.3888717" y="17.7607367" width="63" height="33"></rect>
+                    <rect id="Rectangle-Copy-2" stroke="#13AA41" stroke-width="1.5" opacity="0.5" fill-rule="nonzero" transform="translate(34.344931, 34.433243) rotate(45.000000) translate(-34.344931, -34.433243) " x="6.59493142" y="21.1832432" width="55.5" height="26.5"></rect>
+                    <circle id="Oval" fill="#13AA41" fill-rule="nonzero" opacity="0.501232329" cx="34" cy="34" r="9"></circle>
+                    <circle id="Oval-Copy" fill="#13AA41" fill-rule="nonzero" opacity="0.5" cx="12" cy="24" r="2"></circle>
+                    <circle id="Oval-Copy-2" fill="#13AA41" fill-rule="nonzero" opacity="0.5" cx="56" cy="45" r="2"></circle>
+                    <text id="$" transform="translate(34.939340, 33.646447) rotate(45.000000) translate(-34.939340, -33.646447) " font-family="SourceSansPro-Bold, Source Sans Pro" font-size="12" font-weight="bold" fill="#50D986">
+                        <tspan x="31.7713398" y="38.1464466">$</tspan>
+                    </text>
+                </g>
+                <rect id="Rectangle-Copy" fill="#002554" fill-rule="nonzero" opacity="0.25" transform="translate(45.941125, 64.231493) rotate(45.000000) translate(-45.941125, -64.231493) " x="14.4411255" y="47.7314934" width="63" height="33"></rect>
+                <g id="Group" transform="translate(8.000000, 30.290368)">
+                    <rect id="Rectangle-Copy" fill="#50D986" fill-rule="nonzero" transform="translate(34.888872, 34.260737) rotate(45.000000) translate(-34.888872, -34.260737) " x="3.3888717" y="17.7607367" width="63" height="33"></rect>
+                    <rect id="Rectangle-Copy-2" stroke="#13AA41" stroke-width="1.5" opacity="0.5" fill-rule="nonzero" transform="translate(34.344931, 34.433243) rotate(45.000000) translate(-34.344931, -34.433243) " x="6.59493142" y="21.1832432" width="55.5" height="26.5"></rect>
+                    <circle id="Oval" fill="#13AA41" fill-rule="nonzero" opacity="0.501232329" cx="34" cy="34" r="9"></circle>
+                    <circle id="Oval-Copy" fill="#13AA41" fill-rule="nonzero" opacity="0.5" cx="12" cy="24" r="2"></circle>
+                    <circle id="Oval-Copy-2" fill="#13AA41" fill-rule="nonzero" opacity="0.5" cx="56" cy="45" r="2"></circle>
+                    <text id="$" transform="translate(34.939340, 33.646447) rotate(45.000000) translate(-34.939340, -33.646447) " font-family="SourceSansPro-Bold, Source Sans Pro" font-size="12" font-weight="bold" fill="#50D986">
+                        <tspan x="31.7713398" y="38.1464466">$</tspan>
+                    </text>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

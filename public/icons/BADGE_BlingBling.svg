@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="122px" height="123px" viewBox="0 0 122 123" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.2 (67145) - http://www.bohemiancoding.com/sketch -->
+    <title>Diamond badge</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Actual-Pages" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Badge-earned-2.0" transform="translate(-126.000000, -159.000000)" fill-rule="nonzero">
+            <g id="Diamond-badge" transform="translate(133.000000, 166.000000)">
+                <circle id="Oval" stroke="#FFD96C" stroke-width="7" fill="#002554" cx="54" cy="54.2903679" r="57.5"></circle>
+                <polygon id="Path-3" fill="#FDECEF" points="17.4287109 50.9974747 33 33.7679672 44.4 50.9974747"></polygon>
+                <polyline id="Path-4" fill="#FFFFFF" points="33 33.7679672 54.6898188 33.7679672 43.8449094 50.9974747"></polyline>
+                <polygon id="Path-4-Copy" fill="#FFFFFF" points="54.6898188 33.7679672 77.2611389 33.7679672 65.9 50.9974747"></polygon>
+                <polygon id="Path-6" fill="#DDF2FB" points="54.6898188 33.7679672 65.9 50.9974747 43.848938 50.9974747"></polygon>
+                <polyline id="Path-8" fill="#FDECEF" points="77.2558594 33.7679672 92.3623047 50.9974747 65.9 50.9974747"></polyline>
+                <polygon id="Path-9" fill="#E9F1F0" points="17.4879761 50.9974747 54.6898188 97.1726189 43.8519897 50.9974747"></polygon>
+                <polygon id="Path-10" fill="#DDF2FB" points="65.9 50.9974747 54.6898188 97.1726189 43.8532104 50.9974747"></polygon>
+                <polygon id="Path-11" fill="#E9F1F0" points="65.9 50.9974747 92.3318176 50.9974747 54.6898188 97.1726189"></polygon>
+                <polygon id="Path-7" stroke="#002554" stroke-width="2" stroke-linejoin="round" points="17.581543 50.9974747 92.5839844 51.2903679 77.2900391 33.7679672 33 33.7679672"></polygon>
+                <polyline id="Path-12" stroke="#002554" stroke-width="2" points="33.5795898 34.3553391 43.4 50.0693359 54.6898188 35.0571289 65.9 50.0693359 76.8408203 34.3553391"></polyline>
+                <polyline id="Path-13" stroke="#002554" stroke-width="2" stroke-linejoin="round" points="17.6967773 50.9974747 54.6898188 97.1726189 92.6696777 50.9974747"></polyline>
+                <polyline id="Path-14" stroke="#002554" stroke-width="2" points="43.4 51.2903679 54.6898188 93.7756493 65.9 51.2903679"></polyline>
+                <path d="M54.6898188,21.627417 L55,12" id="Path-15" stroke="#FFF6CB" stroke-width="5" stroke-linecap="round"></path>
+                <path d="M38.6898188,24.627417 L35,17" id="Path-15-Copy" stroke="#FFF6CB" stroke-width="5" stroke-linecap="round"></path>
+                <path d="M70.6898188,24.627417 L75,17" id="Path-15-Copy-2" stroke="#FFF6CB" stroke-width="5" stroke-linecap="round"></path>
+            </g>
+        </g>
+    </g>
+</svg>
