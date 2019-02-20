@@ -21,6 +21,7 @@ const styles = theme => ({
     borderRadius: '1rem',
     backgroundColor: theme.palette.background.paper,
     marginBottom: '1rem',
+    boxShadow: '5px 5px grey',
   },
 });
 
@@ -41,7 +42,7 @@ function AlignItemsList(props) {
               </Typography>
               {" — I'll be in your neighborhood doing errands this…"}
             </React.Fragment>
-)}
+            )}
         />
       </ListItem>
       <ListItem alignItems="flex-start" className={classes.listItem}>
