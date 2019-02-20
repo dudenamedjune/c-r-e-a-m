@@ -23,7 +23,10 @@ function CenteredGrid() {
     <Grid item xs={12}>
       <Grid container>
         <Grid item xs={12}>
-          <Card>
+          <Card
+            titleText="Hari P"
+            subTitleText="10M"
+          >
             <LineChart />
           </Card>
         </Grid>
