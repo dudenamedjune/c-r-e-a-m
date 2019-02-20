@@ -4,6 +4,8 @@ import { withStyles } from '@material-ui/core/styles';
 import LineChart from '../LineChart';
 import PieChart from '../PieChart';
 import Card from '../Card';
+import Button from '@material-ui/core/Button';
+import { Link } from 'react-router-dom'
 
 const styles = theme => ({
   root: {
@@ -31,6 +33,28 @@ function CenteredGrid() {
             <PieChart />
             <LineChart />
           </Card>
+        </Grid>
+        <Grid container>
+          <Grid xs={6} sm={3}>
+            <Card className="homeCard">
+              <Button component={Link} to="#"><img className="homeCardLinkImg" alt="Adjust Goals" src="/icons/ICON_AdjustGoals.svg"></img></Button>
+            </Card>
+          </Grid>
+          <Grid xs={6} sm={3}>
+            <Card className="homeCard">
+              <Button component={Link} to="#"><img className="homeCardLinkImg" alt="Link Account" src="/icons/ICON_LinkAccount.svg"></img></Button>
+            </Card>
+          </Grid>
+          <Grid xs={6} sm={3}>
+            <Card className="homeCard">
+              <Button component={Link} to="#"><img className="homeCardLinkImg" alt="Find Friends" src="/icons/ICON_FindFriends.svg"></img></Button>
+            </Card>
+          </Grid>
+          <Grid xs={6} sm={3}>
+            <Card className="homeCard">
+              <Button component={Link} to="#"><img className="homeCardLinkImg" alt="Savings Tips" src="/icons/ICON_SavingTips.svg"></img></Button>
+            </Card>
+          </Grid>
         </Grid>
       </Grid>
     </Grid>
