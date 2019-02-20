@@ -7,9 +7,9 @@ import CardContent from '@material-ui/core/CardContent';
 // import Button from '@material-ui/core/Button';
 
 const styles = {
-  card: {
-    minWidth: 275,
-  },
+//   card: {
+//     minWidth: 275,
+//   },
   bullet: {
     display: 'inline-block',
     margin: '0 2px',
