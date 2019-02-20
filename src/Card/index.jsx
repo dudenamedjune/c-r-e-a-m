@@ -25,6 +25,9 @@ const styles = {
   pos: {
     marginBottom: 12,
   },
+  card: {
+    margin: '1rem',
+  },
 };
 
 function SimpleCard(props) {
