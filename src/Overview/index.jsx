@@ -2,6 +2,7 @@ import Grid from '@material-ui/core/Grid';
 import React from 'react';
 import { withStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
+import Typography from '@material-ui/core/Typography';
 import { Link } from 'react-router-dom';
 import LineChart from '../LineChart';
 // import PieChart from '../PieChart';
@@ -19,16 +20,26 @@ const styles = theme => ({
     margin: 10,
     color: theme.palette.text.secondary,
   },
+  title: {
+    fontWeight: '400',
+    marginTop: '1rem',
+    marginLeft: '1rem',
+  },
 });
 
-function CenteredGrid() {
+function CenteredGrid(props) {
+  const {
+    classes,
+  } = props;
   return (
     <Grid item xs={12}>
       <Grid container>
+        <Typography component="span" variant="h5" className={classes.title} color="textPrimary">
+                Hi, Emily
+        </Typography>
         <Grid item xs={12}>
           <Card
-            titleText="Hari P"
-            subTitleText="10M"
+            titleText="Total Saved: $21,300"
           >
             {/* <PieChart /> */}
             <LineChart />

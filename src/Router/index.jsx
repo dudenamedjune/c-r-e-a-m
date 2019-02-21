@@ -24,6 +24,17 @@ const styles = theme => ({
     textAlign: 'center',
     color: theme.palette.text.secondary,
   },
+  logo: {
+    fontFamily: 'Pacifico',
+    color: '#50D986',
+    fontWeight: 'bold',
+    paddingTop: '1rem',
+    paddingLeft: '1rem',
+  },
+  icon: {
+    paddingTop: '1.2rem',
+    paddingRight: '1.2rem',
+  },
 });
 
 class CenteredTabs extends Component {
@@ -41,45 +52,42 @@ class CenteredTabs extends Component {
     return (
       <Router>
         <div className={classes.root}>
-          <Grid container spacing={24}>
-            <Grid item xs={12}>
-              <div>
-                <Paper className={classes.root}>
-                  <AppBar position="static">
-                    <Toolbar>
-                      <Typography variant="h6" color="inherit" className={classes.grow}>
-              CREAM
-                      </Typography>
-                      {(
-                        <div>
-                          <IconButton
-                            aria-owns="menu-appbar"
-                            aria-haspopup="true"
-                            onClick={this.handleMenu}
-                            color="inherit"
-                          >
-                            <AccountCircle />
-                          </IconButton>
-                        </div>
-            )}
-                    </Toolbar>
-                  </AppBar>
+          <Paper>
+            <Grid container spacing={24}>
+              <Grid item xs={10}>
+                <Typography variant="h6" color="inherit" className={classes.logo}>
+                        CREAM
+                </Typography>
+              </Grid>
+              <Grid xs={2}>
+                <IconButton
+                  aria-owns="menu-appbar"
+                  aria-haspopup="true"
+                  onClick={this.handleMenu}
+                  color="inherit"
+                  className={classes.icon}
+                >
+                  <AccountCircle />
+                </IconButton>
+              </Grid>
+              <Grid xs={12}>
+                <Tabs
+                  value={this.state.value}
+                  onChange={this.handleChange}
+                  indicatorColor="primary"
+                  textColor="primary"
+                  centered
+                >
+                  <Tab label={<Link to="/"> Overview</Link>} />
+                  <Tab label={<Link to="/leaderboard"> Leaderboard</Link>} />
+                  <Tab label={<Link to="/badges"> Badges</Link>} />
 
-                  <Tabs
-                    value={this.state.value}
-                    onChange={this.handleChange}
-                    indicatorColor="primary"
-                    textColor="primary"
-                    centered
-                  >
-                    <Tab label={<Link to="/"> Overview</Link>} />
-                    <Tab label={<Link to="/leaderboard"> Leaderboard</Link>} />
-                    <Tab label={<Link to="/badges"> Badges</Link>} />
-
-                  </Tabs>
-                </Paper>
-              </div>
+                </Tabs>
+              </Grid>
             </Grid>
+          </Paper>
+
+          <Grid container spacing={24}>
             <Route exact path="/" component={Overview} />
             <Route path="/leaderboard" component={Leaderboard} />
             <Route path="/badges" component={Badges} />
