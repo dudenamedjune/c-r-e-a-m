@@ -37,6 +37,10 @@ const styles = theme => ({
 function CenteredGrid(props) {
   const {
     classes,
+    accountInfo: {
+      totalSavings,
+      biYearly,
+    },
   } = props;
   return (
     <Grid item xs={12}>
@@ -46,10 +50,10 @@ function CenteredGrid(props) {
         </Typography>
         <Grid item xs={12}>
           <Card
-            titleText="Total Saved: $21,300"
+            titleText={`Total Saved: $${totalSavings}`}
           >
             {/* <PieChart /> */}
-            <LineChart />
+            <LineChart data={biYearly} />
           </Card>
         </Grid>
         <Grid container>

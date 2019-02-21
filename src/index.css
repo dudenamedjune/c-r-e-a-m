@@ -14,7 +14,8 @@ code {
 }
 
 .homeCardLinkImg {
-  height: 80px;
+  height: 40px;
+  margin-left: 2rem;
 }
 
 .homeCard, .friend-list {
@@ -27,8 +28,4 @@ code {
 
 .friend {
   display: table-cell;
-}
-
-.leftIcons {
-  margin-left: 1rem;
 }

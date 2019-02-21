@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
-import PropTypes from 'prop-types';
+import { shape } from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Tabs from '@material-ui/core/Tabs';
@@ -9,6 +9,7 @@ import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import IconButton from '@material-ui/core/IconButton';
 import AccountCircle from '@material-ui/icons/AccountCircle';
+import axios from 'axios';
 import Overview from '../Overview';
 import Leaderboard from '../LeaderBoard';
 import Badges from '../Badges';
@@ -35,14 +36,61 @@ const styles = theme => ({
   },
 });
 
+const cleanAccountData = (array, object) => array.reduce((accum, curr) => {
+  const {
+    [curr]: {
+      N: value,
+    },
+  } = object;
+  return [...accum, { value }];
+}, []);
 class CenteredTabs extends Component {
   state = {
-    value: 0,
-  };
+    yearly: [],
+    biYearly: [],
+    quarterly: [],
+    totalSavings: '',
+  }
 
-  handleChange = (event, value) => {
-    this.setState({ value });
-  };
+  componentDidMount() {
+    axios.get('https://6wsa4m0onh.execute-api.us-east-2.amazonaws.com/v1')
+      .then(({
+        data: {
+          body,
+        },
+      }) => {
+        const parsed = JSON.parse(body);
+        const {
+          TotalSavings: {
+            N: totalSavings,
+          },
+          UserAccountsDetails12M: {
+            L: [{
+              M: quarterly,
+            }],
+          },
+          UserAccountsDetails3Y: {
+            L: [{
+              M: biYearly,
+            }],
+          },
+          UserAccountsDetailsALL: {
+            L: [{
+              M: yearly,
+            }],
+          },
+        } = parsed;
+
+        console.log(cleanAccountData(Object.keys(biYearly), biYearly));
+        this.setState({
+          totalSavings,
+          quarterly: cleanAccountData(Object.keys(quarterly), quarterly),
+          biYearly: cleanAccountData(Object.keys(biYearly), biYearly),
+          yearly: cleanAccountData(Object.keys(yearly), yearly),
+        });
+        // console.log(cleanAccountData(yearly));
+      });
+  }
 
   render() {
     const { classes } = this.props;
@@ -70,11 +118,10 @@ class CenteredTabs extends Component {
               </Grid>
               <Grid xs={12}>
                 <Tabs
-                  value={this.state.value}
                   onChange={this.handleChange}
                   indicatorColor="primary"
                   textColor="primary"
-                  centered
+                  variant="fullWidth"
                 >
                   <Tab label={<Link to="/"> Overview</Link>} />
                   <Tab label={<Link to="/leaderboard"> Leaderboard</Link>} />
@@ -86,7 +133,7 @@ class CenteredTabs extends Component {
           </Paper>
 
           <Grid container spacing={24}>
-            <Route exact path="/" component={Overview} />
+            <Route exact path="/" render={() => <Overview accountInfo={this.state} />} />
             <Route path="/leaderboard" component={Leaderboard} />
             <Route path="/badges" component={Badges} />
           </Grid>
@@ -99,7 +146,7 @@ class CenteredTabs extends Component {
 }
 
 CenteredTabs.propTypes = {
-  classes: PropTypes.object.isRequired,
+  classes: shape({}).isRequired,
 };
 
 export default withStyles(styles)(CenteredTabs);
