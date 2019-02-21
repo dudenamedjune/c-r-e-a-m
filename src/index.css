@@ -17,6 +17,14 @@ code {
   height: 80px;
 }
 
-.homeCard {
+.homeCard, .friend-list {
   margin: 10px;
+}
+
+.friends-group {
+  width: 100%;
+}
+
+.friend {
+  display: table-cell;
 }

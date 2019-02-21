@@ -83,7 +83,7 @@ import Typography from '@material-ui/core/Typography';
 import IconButton from '@material-ui/core/IconButton';
 import AccountCircle from '@material-ui/icons/AccountCircle';
 import Overview from '../Overview';
-import Leaderboard from '../LeaderBoard';
+import Leaderboard from '../Leaderboard';
 
 const styles = theme => ({
   root: {
