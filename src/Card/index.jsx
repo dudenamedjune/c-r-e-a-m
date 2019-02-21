@@ -27,6 +27,7 @@ const styles = {
   },
   card: {
     margin: '1rem',
+    borderRadius: '1rem',
   },
 };
 
