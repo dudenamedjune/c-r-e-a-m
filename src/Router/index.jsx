@@ -46,9 +46,9 @@ const cleanAccountData = (array, object) => array.reduce((accum, curr) => {
 }, []);
 class CenteredTabs extends Component {
   state = {
-    yearly: [],
-    biYearly: [],
-    quarterly: [],
+    year: [],
+    threeYear: [],
+    all: [],
     totalSavings: '',
   }
 
@@ -84,9 +84,9 @@ class CenteredTabs extends Component {
         console.log(cleanAccountData(Object.keys(biYearly), biYearly));
         this.setState({
           totalSavings,
-          quarterly: cleanAccountData(Object.keys(quarterly), quarterly),
-          biYearly: cleanAccountData(Object.keys(biYearly), biYearly),
-          yearly: cleanAccountData(Object.keys(yearly), yearly),
+          year: cleanAccountData(Object.keys(quarterly), quarterly),
+          threeYear: cleanAccountData(Object.keys(biYearly), biYearly),
+          all: cleanAccountData(Object.keys(yearly), yearly),
         });
         // console.log(cleanAccountData(yearly));
       });
