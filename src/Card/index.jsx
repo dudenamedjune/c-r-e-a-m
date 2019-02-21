@@ -21,6 +21,7 @@ const styles = {
   title: {
     fontSize: 14,
     color: 'white',
+    fontFamily: 'Oswald',
   },
   pos: {
     marginBottom: 12,

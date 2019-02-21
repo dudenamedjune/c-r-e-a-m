@@ -23,7 +23,14 @@ const styles = theme => ({
   title: {
     fontWeight: '400',
     marginTop: '1rem',
-    marginLeft: '1rem',
+    marginLeft: '1.5rem',
+    fontFamily: 'Open Sans',
+  },
+  dashboardCons: {
+    fontFamily: 'Open Sans',
+  },
+  rightIcons: {
+    marginRight: '-1rem',
   },
 });
 
@@ -48,22 +55,35 @@ function CenteredGrid(props) {
         <Grid container>
           <Grid xs={6} sm={3}>
             <Card className="homeCard">
-              <Button component={Link} to="#"><img className="homeCardLinkImg" alt="Adjust Goals" src="/icons/ICON_AdjustGoals.svg" /></Button>
+              <Button component={Link} to="#"><img className="homeCardLinkImg" alt="Adjust Goals" src="/icons/ICON_AdjustGoals.svg" />
+              </Button>
+              <Typography align="center" component="span" variant="h5" className={classes.dashboardCons} color="textPrimary">
+                Adjust Goals
+              </Typography>
             </Card>
           </Grid>
           <Grid xs={6} sm={3}>
             <Card className="homeCard">
-              <Button component={Link} to="#"><img className="homeCardLinkImg" alt="Link Account" src="/icons/ICON_LinkAccount.svg" /></Button>
+              <Button component={Link} to="#"><img className="homeCardLinkImg leftIcons" alt="Link Account" src="/icons/ICON_LinkAccount.svg" /></Button>
+              <Typography align="center" component="span" variant="h5" className={classes.dashboardCons} color="textPrimary">
+                Link Account
+              </Typography>
             </Card>
           </Grid>
           <Grid xs={6} sm={3}>
             <Card className="homeCard">
               <Button component={Link} to="#"><img className="homeCardLinkImg" alt="Find Friends" src="/icons/ICON_FindFriends.svg" /></Button>
+              <Typography align="center" component="span" variant="h5" className={classes.dashboardCons} color="textPrimary">
+                Find Friends
+              </Typography>
             </Card>
           </Grid>
           <Grid xs={6} sm={3}>
             <Card className="homeCard">
-              <Button component={Link} to="#"><img className="homeCardLinkImg" alt="Savings Tips" src="/icons/ICON_SavingTips.svg" /></Button>
+              <Button component={Link} to="#"><img className="homeCardLinkImg leftIcons" alt="Savings Tips" src="/icons/ICON_SavingTips.svg" /></Button>
+              <Typography align="center" component="span" variant="h5" className={classes.dashboardCons} color="textPrimary">
+                Saving Tips
+              </Typography>
             </Card>
           </Grid>
         </Grid>

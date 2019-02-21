@@ -28,3 +28,7 @@ code {
 .friend {
   display: table-cell;
 }
+
+.leftIcons {
+  margin-left: 1rem;
+}

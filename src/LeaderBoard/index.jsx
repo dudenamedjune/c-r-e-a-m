@@ -9,7 +9,6 @@ import axios from 'axios';
 import Card from '../Card';
 
 export default class Leaderboard extends Component {
-
   constructor(props) {
     super(props);
 
@@ -17,37 +16,35 @@ export default class Leaderboard extends Component {
       friends: [],
     };
   }
-  
-  componentDidMount(){
+
+  componentDidMount() {
     axios.get('https://fq5ddaci86.execute-api.us-east-2.amazonaws.com/v1')
-    .then((response) => {
-      console.log(response);
-      this.setState({friends: response.data})
-    })
+      .then((response) => {
+        console.log(response);
+        this.setState({ friends: response.data });
+      });
   }
 
   renderFriends() {
-    return this.state.friends.map(function (friend) {
-      return (
-        <Card>
-          <ListItem className="friend" alignItems="flex-start">
-            <ListItemAvatar>
-              <Avatar alt="Remy Sharp" src={friend.avatar} />
-            </ListItemAvatar>
-            <ListItemText
-              primary={friend.name}
-              secondary={(
-                <React.Fragment>
-                  <Typography component="span" color="textPrimary">
-                    {friend.desc}
-                  </Typography>
-                </React.Fragment>
+    return this.state.friends.map(friend => (
+      <Card>
+        <ListItem className="friend" alignItems="flex-start">
+          <ListItemAvatar>
+            <Avatar alt="Remy Sharp" src={friend.avatar} />
+          </ListItemAvatar>
+          <ListItemText
+            primary={friend.name}
+            secondary={(
+              <React.Fragment>
+                <Typography component="span" color="textPrimary">
+                  {friend.desc}
+                </Typography>
+              </React.Fragment>
               )}
-            />
-          </ListItem>
-        </Card>
-      )
-    });
+          />
+        </ListItem>
+      </Card>
+    ));
   }
 
   render() {

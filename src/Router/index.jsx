@@ -6,8 +6,6 @@ import Paper from '@material-ui/core/Paper';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import Grid from '@material-ui/core/Grid';
-import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import IconButton from '@material-ui/core/IconButton';
 import AccountCircle from '@material-ui/icons/AccountCircle';
@@ -27,7 +25,7 @@ const styles = theme => ({
   logo: {
     fontFamily: 'Pacifico',
     color: '#50D986',
-    fontWeight: 'bold',
+    fontWeight: '200',
     paddingTop: '1rem',
     paddingLeft: '1rem',
   },
@@ -55,8 +53,8 @@ class CenteredTabs extends Component {
           <Paper>
             <Grid container spacing={24}>
               <Grid item xs={10}>
-                <Typography variant="h6" color="inherit" className={classes.logo}>
-                        CREAM
+                <Typography variant="h4" color="inherit" className={classes.logo}>
+                       cream
                 </Typography>
               </Grid>
               <Grid xs={2}>
