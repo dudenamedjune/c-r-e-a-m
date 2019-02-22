@@ -31,7 +31,7 @@ const styles = theme => ({
     paddingLeft: '1rem',
   },
   icon: {
-    paddingTop: '1.2rem',
+    paddingTop: '2.2rem',
     paddingRight: '1.2rem',
   },
 });
@@ -92,6 +92,10 @@ class CenteredTabs extends Component {
       });
   }
 
+  handleChange = (event, value) => {
+    this.setState({ value });
+  };
+
   render() {
     const { classes } = this.props;
 
@@ -118,14 +122,15 @@ class CenteredTabs extends Component {
               </Grid>
               <Grid xs={12}>
                 <Tabs
+                  value={this.state.value}
                   onChange={this.handleChange}
                   indicatorColor="primary"
                   textColor="primary"
                   variant="fullWidth"
                 >
-                  <Tab label={<Link to="/"> Overview</Link>} />
-                  <Tab label={<Link to="/leaderboard"> Leaderboard</Link>} />
-                  <Tab label={<Link to="/badges"> Badges</Link>} />
+                  <Tab label={<Link style={{ color: 'inherit' }} to="/"> Overview</Link>} />
+                  <Tab label={<Link style={{ color: 'inherit' }} to="/leaderboard"> Leaderboard</Link>} />
+                  <Tab label={<Link style={{ color: 'inherit' }} to="/badges"> Badges</Link>} />
 
                 </Tabs>
               </Grid>

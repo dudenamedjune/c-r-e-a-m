@@ -1,6 +1,9 @@
 import React, { PureComponent, Fragment } from 'react';
+// import {
+//   LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend,
+// } from 'recharts';
 import {
-  LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend,
+  AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip,
 } from 'recharts';
 import Button from '@material-ui/core/Button';
 
@@ -63,7 +66,8 @@ export default class Example extends PureComponent {
     } = this.props;
     return (
       <Fragment>
-        <LineChart
+
+        <AreaChart
           width={width * 0.95}
           height={height / 5}
           data={data || year}
@@ -71,12 +75,9 @@ export default class Example extends PureComponent {
             top: 5, right: 30,
           }}
         >
-          {/* <CartesianGrid strokeDasharray="3 3" /> */}
-          {/* <XAxis dataKey="name" />
-        <YAxis /> */}
           <Tooltip />
-          <Line type="monotone" dataKey="value" stroke="#82ca9d" />
-        </LineChart>
+          <Area type="monotone" dataKey="value" stroke="#8884d8" fill="#0056BF" />
+        </AreaChart>
         <Button onClick={this.setYear}>1y</Button>
         <Button onClick={this.setThreeYear}>3y</Button>
         <Button onClick={this.setAll}>All</Button>
@@ -85,3 +86,19 @@ export default class Example extends PureComponent {
     );
   }
 }
+
+
+{ /* <LineChart
+width={width * 0.95}
+height={height / 5}
+data={data || year}
+margin={{
+  top: 5, right: 30,
+}}
+>
+{/* <CartesianGrid strokeDasharray="3 3" /> */ }
+{ /* <XAxis dataKey="name" />
+<YAxis /> */ }
+{ /* <Tooltip />
+<Line type="linear" dataKey="value" stroke="#82ca9d" /> */ }
+// </LineChart> */}
